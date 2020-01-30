@@ -1,0 +1,14 @@
+#include <stdlib.h>
+#include "TXLib.h"
+
+/**
+Данная программа может нарисовать ромб, изменить его цвет, изменить толщину его границы.На что горазд, то и сделал
+*/
+void rhombus (double x, double y,double size/**размер фигуры */,double colour_line_1/** палитра R границы*/, double colour_line_2/** палитра G границы*/,double colour_line_3/** палитра B границы*/,
+              double thickness,double colour_fill_1/** палитра R заливки*/, double colour_fill_2/** палитра G заливки*/,double colour_fill_3/** палитра B заливки*/)
+{
+    POINT rhombus_body[4]={{x-10*size,y},{x,y+15*size},{x+10*size,y},{x,y-15*size}};/**задаём границы ромба*/
+    txSetColor( RGB(colour_line_1, colour_line_2, colour_line_3),thickness);/**задаём границы ромба*/
+    txSetFillColor( RGB(colour_fill_1, colour_fill_2, colour_fill_3));/**задаём заливки ромба*/
+    txPolygon(rhombus_body,4);/**рисуем ромб/
+}
