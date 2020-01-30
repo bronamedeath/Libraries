@@ -86,7 +86,7 @@ void paintButtonEllipse(int x, int y, int size_, int RGBline, int RGBfill, int R
     txEllipse(x, y, x+100*size_, y+40*size_);
     txSetColour(RGBtext);
     int len = strlen(text);
-    txTextOut(x+(50-2*len)*size_, y+40*size_/2-5, text);
+    txTextOut(x+(45-2*len)*size_, y+40*size_/2-5, text);
 }
 
 /*!
@@ -106,7 +106,7 @@ void paintBeautifulButtonEllipse(int x, int y, int size_, int RGBback, int RGBfr
     txCircle(x+155*size_, y+40*size_, 5*size_);
     txSetColour(RGBtext);
     int len = strlen(text);
-    txTextOut(x+(100-2*len)*size_, y+80*size_/2-5, text);
+    txTextOut(x+(90-2*len)*size_, y+80*size_/2-5, text);
 }
 
 /*!
