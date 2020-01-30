@@ -10,7 +10,7 @@ void paintButton(int x, int y, int size_, int RGBline, int RGBfill, int RGBtext,
     txRectangle(x, y, x+100*size_, y+40*size_);
     txSetColour(RGBtext);
     int len = strlen(text);
-    txTextOut(x+50*size_-2*len, y+40*size_/2-5, text);
+    txTextOut(x+(50-2*len)*size_, y+40*size_/2-5, text);
 }
 
 /*!
@@ -23,19 +23,19 @@ void paintButtonChristmasTree(int x, int y)
     txRectangle(x, y, x+200, y+80);
     txSetColor(RGB(102, 51, 0));
     txSetFillColor(RGB(153, 51, 0));
-    txRectangle(x+30, y+60, x+40, y+70); //1 ствол
-    txRectangle(x+160, y+60, x+170, y+70); //2 ствол
+    txRectangle(x+30, y+60, x+40, y+70); //1 Г±ГІГўГ®Г«
+    txRectangle(x+160, y+60, x+170, y+70); //2 Г±ГІГўГ®Г«
     txSetColor(RGB(0, 153, 0), 3);
-    txLine(x+25, y+40, x+45, y+40); //1 маденький треугольник
+    txLine(x+25, y+40, x+45, y+40); //1 Г¬Г Г¤ГҐГ­ГјГЄГЁГ© ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄ
     txLine(x+45, y+40, x+35, y+30);
     txLine(x+35, y+30, x+25, y+40);
-    txLine(x+20, y+60, x+50, y+60); //1 большой треугольник
+    txLine(x+20, y+60, x+50, y+60); //1 ГЎГ®Г«ГјГёГ®Г© ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄ
     txLine(x+50, y+60, x+35, y+40);
     txLine(x+35, y+40, x+20, y+60);
-    txLine(x+155, y+40, x+175, y+40); //2 маленький треугольник
+    txLine(x+155, y+40, x+175, y+40); //2 Г¬Г Г«ГҐГ­ГјГЄГЁГ© ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄ
     txLine(x+175, y+40, x+165, y+30);
     txLine(x+165, y+30, x+155, y+40);
-    txLine(x+150, y+60, x+180, y+60); //2 большой треугольник
+    txLine(x+150, y+60, x+180, y+60); //2 ГЎГ®Г«ГјГёГ®Г© ГІГ°ГҐГіГЈГ®Г«ГјГ­ГЁГЄ
     txLine(x+180, y+60, x+165, y+40);
     txLine(x+165, y+40, x+150, y+60);
     txSetFillColor(RGB(51, 204, 0));
@@ -73,7 +73,7 @@ void paintButtonWithShadow(int x, int y, int size_, int RGBshadow, int RGBfill, 
     txRectangle(x, y, x+100*size_, y+40*size_);
     txSetColour(RGBtext);
     int len = strlen(text);
-    txTextOut(x+50*size_-2*len, y+40*size_/2-5, text);
+    txTextOut(x+(50-2*len)*size_, y+40*size_/2-5, text);
 }
 
 /*!
@@ -86,7 +86,7 @@ void paintButtonEllipse(int x, int y, int size_, int RGBline, int RGBfill, int R
     txEllipse(x, y, x+100*size_, y+40*size_);
     txSetColour(RGBtext);
     int len = strlen(text);
-    txTextOut(x+50*size_-2*len, y+40*size_/2-5, text);
+    txTextOut(x+(50-2*len)*size_, y+40*size_/2-5, text);
 }
 
 /*!
@@ -106,7 +106,7 @@ void paintBeautifulButtonEllipse(int x, int y, int size_, int RGBback, int RGBfr
     txCircle(x+155*size_, y+40*size_, 5*size_);
     txSetColour(RGBtext);
     int len = strlen(text);
-    txTextOut(x+100*size_-2*len, y+80*size_/2-5, text);
+    txTextOut(x+(100-2*len)*size_, y+80*size_/2-5, text);
 }
 
 /*!
@@ -126,7 +126,7 @@ void paintVolumetricButton(int x, int y, int size_, int RGBline, int RGBfill, in
     txFloodFill(x+210*size_, y);
     txSetColour(RGBtext);
     int len = strlen(text);
-    txTextOut(x+100*size_-2*len, y+80*size_/2-5, text);
+    txTextOut(x+(90-2*len)*size_, y+80*size_/2-5, text);
 }
 
 /*!
@@ -153,7 +153,7 @@ void paintVolumetricButtonArrow(int x, int y, int size_, int RGBline, int RGBtop
     txFloodFill(x+67*size_, y+45*size_);
     txSetColour(RGBtext);
     int len = strlen(text);
-    txTextOut(x+40*size_-2*len, y+40*size_/2-5, text);
+    txTextOut(x+(40-2*len)*size_, y+40*size_/2-5, text);
 }
 
 /*!
@@ -178,7 +178,7 @@ void paintPushButton(int x, int y, int size_, int RGBshadow, int RGBfill, int RG
             txRectangle(x-20*size_, y-20*size_, x+180*size_, y+60*size_);
             txSetColour(RGBtext);
             int len = strlen(text);
-            txTextOut(x+80*size_-2*len, y+40*size_/2-5, text);
+            txTextOut(x+(80-2*len)*size_, y+40*size_/2-5, text);
             txEnd();
         }
 
@@ -193,7 +193,7 @@ void paintPushButton(int x, int y, int size_, int RGBshadow, int RGBfill, int RG
             txRectangle(x, y, x+200*size_, y+80*size_);
             txSetColour(RGBtext);
             int len = strlen(text);
-            txTextOut(x+100*size_-2*len, y+80*size_/2-5, text);
+            txTextOut(x+(100-2*len)*size_, y+80*size_/2-5, text);
             txEnd();
         }
     }
@@ -220,7 +220,7 @@ void paintColorChangingParallelogramButton(int x, int y, int size_, int RGBline1
             txFloodFill(x+10*size_, y+10*size_);
             txSetColor(RGBtext);
             int len = strlen(text);
-            txTextOut(x+40*size_-2*len, y+50*size_/2-5, text);
+            txTextOut(x+(40-2*len)*size_, y+50*size_/2-5, text);
             txEnd();
         }
 
@@ -236,7 +236,7 @@ void paintColorChangingParallelogramButton(int x, int y, int size_, int RGBline1
             txFloodFill(x+10*size_, y+10*size_);
             txSetColor(RGBtext2);
             int len = strlen(text);
-            txTextOut(x+40*size_-2*len, y+50*size_/2-5, text);
+            txTextOut(x+(40-2*len) *size_, y+50*size_/2-5, text);
             txEnd();
         }
 }
